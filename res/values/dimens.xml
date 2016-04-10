@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="scan_progressbar_width">96dp</dimen>
+    <dimen name="scan_progressbar_height">96dp</dimen>    
+    <dimen name="rescan_button_width">96dp</dimen>
+    <dimen name="rescan_button_height">96dp</dimen>
+</resources>
