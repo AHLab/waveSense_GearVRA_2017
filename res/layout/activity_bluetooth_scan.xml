@@ -6,6 +6,25 @@
     android:background="@android:color/white"
     android:gravity="center"
     tools:context="zorg.ahlab.wavesense.ui.BluetoothScanActivity" >
+    
+    <CheckBox
+        android:id="@+id/checkBoxStream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="Stream" />
+    
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="IP Address of Server" 
+        android:enabled="false">
+        <!-- <requestFocus /> -->
+    </AutoCompleteTextView>
 
     <RelativeLayout
         android:id="@+id/relativeLayoutImageviewscan"
@@ -17,8 +36,8 @@
             android:id="@+id/imageviewscan"
             android:layout_width="@dimen/scan_progressbar_width"
             android:layout_height="@dimen/scan_progressbar_height"
-            android:layout_margin="20dp"
-            android:layout_centerInParent="true" />
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp" />
 
         <ImageButton
             android:id="@+id/imageButtonRescan"
@@ -32,8 +51,9 @@
             android:id="@+id/relativeLayoutScanningText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageviewscan"            
-            android:background="@android:color/white" >
+            android:layout_below="@+id/imageviewscan"
+            android:background="@android:color/white"
+            android:layout_marginTop="20dp" >
 
             <TextView
                 android:id="@+id/textViewScanning"
@@ -43,21 +63,22 @@
                 android:text="@string/scanning"
                 android:textColor="@android:color/darker_gray" />
         </RelativeLayout>
+
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/relativeLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/relativeLayoutImageviewscan"
         android:layout_alignParentBottom="true"
+        android:layout_below="@+id/relativeLayoutImageviewscan"
         android:background="@android:color/white" >
 
         <ListView
             android:id="@+id/device_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" 
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true" >
         </ListView>
     </RelativeLayout>
-
 </RelativeLayout>
